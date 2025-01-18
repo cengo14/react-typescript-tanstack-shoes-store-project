@@ -1,50 +1,77 @@
-# React + TypeScript + Vite
+# Ayakkabı Satış Sistemi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, kullanıcıların ayakkabı ürünlerini listeleyip detaylarını görüntüleyebileceği ve çeşitli filtreleme özelliklerinden faydalanabileceği bir web uygulamasıdır. **React** ve **TypeScript** ile geliştirilmiş olup, veriler **JSON-Server** üzerinde saklanmaktadır. Frontend tarafında **TanStack Query**, **Axios** ve **Tailwind CSS** kullanılmıştır.
 
-Currently, two official plugins are available:
+## Özellikler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Ürün Listeleme:** Tüm ayakkabı ürünlerini listeler.
+- **Detay Görüntüleme:** Her bir ürünün detayına, üzerine tıklayarak erişilebilir.
+- **Filtreleme:**
+  - **Rengine Göre:** Ürünler renklerine göre filtrelenebilir.
+  - **Numarasına Göre:** İstenilen numaradaki ürünler görüntülenebilir.
+  - **Fiyatına Göre:** Fiyat aralığına göre ayakkabılar listelenebilir.
+  - **Cinsiyete Göre:** Kadın, erkek veya unisex ürünler filtrelenebilir.
+- **Modern Tasarım:** Tailwind CSS ile responsive ve kullanıcı dostu bir arayüz.
+- **Hızlı ve Gerçek Zamanlı Veri Yönetimi:** TanStack Query ve Axios kullanımı.
 
-## Expanding the ESLint configuration
+## Kullanılan Teknolojiler
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Frontend:
 
-- Configure the top-level `parserOptions` property like this:
+- **React**
+- **TypeScript**
+- **TanStack Query**
+- **Axios**
+- **Tailwind CSS**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Backend:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **JSON-Server**
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Kurulum ve Çalıştırma
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Proje dizinine gidin:
+   ```bash
+   cd react-typescript-tanstack-shoes-store-project
+   ```
+2. Gerekli bağımlılıkları yükleyin:
+
+   ```bash
+   npm install
+   ```
+
+3. JSON-Server'ı başlatın:
+   ```bash
+   npm run server
+   ```
+4. Uygulamayı başlatın:
+   ```bash
+   npm run dev
+   ```
+
+## Ekran Görüntüleri
+
+![Uygulama Görünümü](./screenshots/ss.png)
+
+## Katkıda Bulunma
+
+1. Bu projeyi forklayın.
+2. Yeni bir dal oluşturun:
+   ```bash
+   git checkout -b yeni-ozellik
+   ```
+3. Değişikliklerinizi commit edin:
+   ```bash
+   git commit -m "Yeni bir özellik eklendi"
+   ```
+4. Dalınızı push edin:
+   ```bash
+   git push origin yeni-ozellik
+   ```
+5. Pull Request oluşturun.
+
+## Lisans
+
+Bu proje MIT Lisansı ile lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakabilirsiniz.
+
+---
