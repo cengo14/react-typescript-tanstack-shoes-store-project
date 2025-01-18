@@ -51,7 +51,7 @@ Bu proje, kullanıcıların ayakkabı ürünlerini listeleyip detaylarını gör
 
 ## Ekran Görüntüleri
 
-![Uygulama Görünümü](./screenshots/ss.png)
+![Uygulama Görünümü](./screenshots/ss.gif)
 
 ## Katkıda Bulunma
 
